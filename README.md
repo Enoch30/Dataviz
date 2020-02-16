@@ -17,5 +17,5 @@ VueJs + Vuetify + MDBVue
 
 ## Screenshots
 
-<img src="images/1.PNG" height=500>
-<img src="images/2.PNG" height=500>
+<img src="images/1.png" height=500>
+<img src="images/2.png" height=500>
