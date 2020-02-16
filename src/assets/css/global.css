@@ -1,0 +1,31 @@
+* { margin: 0 !important; }
+.max-width {
+    max-width: 100%
+}
+.bg-whitesmoke {
+    background-color: whitesmoke;
+}
+.bg-white {
+    background-color: white;
+}
+.col-md-6 {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+   
+}
+.chart card {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+/* canvas {
+    text-align: center;
+	position: relative;
+	width: 600px;
+	height: 400px;
+	left: 10%;
+	top: 10%;
+	margin-left: -250px; 
+    margin-top: -100px;
+} */

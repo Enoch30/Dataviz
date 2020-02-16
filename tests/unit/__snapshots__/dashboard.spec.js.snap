@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard.vue should have a custom title and match snapshot 1`] = `
+<div title="Foobar">
+  <mdb-container-stub tag="div" class="max-width hidden-sm-and-down">
+    <v-btn color="blue darken-1" id="btn" text="" class="btn">Cancel</v-btn>
+    <mdb-row-stub tag="div">
+      <mdb-col-stub tag="div" md="6">
+        <mdb-card-stub tag="div" class="chart">
+          <mdb-card-header-stub tag="div" color="indigo lighten-1">Pie chart</mdb-card-header-stub>
+          <mdb-card-body-stub tag="div">
+            <mdb-card-title-stub tag="h4"></mdb-card-title-stub>
+            <div class="d-flex justify-content-center">
+              <mdb-pie-chart-stub chartid="pie-chart" width="470" height="400" cssclasses="" plugins="" data="[object Object]" options="[object Object]" datalabels="true"></mdb-pie-chart-stub>
+            </div>
+          </mdb-card-body-stub>
+        </mdb-card-stub>
+      </mdb-col-stub>
+      <mdb-col-stub tag="div" md="6">
+        <mdb-card-stub tag="div" class="chart">
+          <mdb-card-header-stub tag="div" color="indigo lighten-1">Bar chart</mdb-card-header-stub>
+          <mdb-card-body-stub tag="div">
+            <mdb-card-title-stub tag="h4"></mdb-card-title-stub>
+            <div class="d-flex justify-content-center">
+              <mdb-bar-chart-stub chartid="bar-chart" width="470" height="400" cssclasses="" plugins="" data="[object Object]" options="[object Object]"></mdb-bar-chart-stub>
+            </div>
+          </mdb-card-body-stub>
+        </mdb-card-stub>
+      </mdb-col-stub>
+    </mdb-row-stub>
+  </mdb-container-stub>
+  <mdb-card-stub tag="div" class="m-3">
+    <mdb-card-header-stub tag="div" color="indigo lighten-1">Data Table</mdb-card-header-stub>
+    <datatable-stub salesdata="[object Object]"></datatable-stub>
+  </mdb-card-stub>
+</div>
+`;
