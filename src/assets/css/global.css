@@ -29,3 +29,40 @@
 	margin-left: -250px; 
     margin-top: -100px;
 } */
+
+.stars {
+    color: red;
+}
+.rounded-circle {
+    max-width: 150px;
+  }
+  .subtitle {
+    /* height: 20px;
+    width: 172px; */
+    color: #8E8E8E;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .title {
+    /* height: 24px;
+  width: 64px; */
+  color: #4C4C4C;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 24px;
+  }
+  .card {
+    height: 304px;
+    width: 344px;
+    background-color: #FFFFFF;
+  }
+
+  .cat {
+    height: 20px;
+    width: 29.09px;
+  }
+
+  .card-body{
+      padding: .5rem
+  }
