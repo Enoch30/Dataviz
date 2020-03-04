@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mdb-container class='max-width'>
+    <mdb-container class='max-width hidden-sm-and-down'>
       
       <!-- 
         Removed due to Google Maps API key
@@ -15,7 +15,7 @@
         :options="chartOptions"
       /> -->
       <mdb-row>
-        <!-- <mdb-col md="6" >
+        <mdb-col md="6" >
           <template>
             <mdb-card class="chart">
               <mdb-card-header color="indigo lighten-1">Pie chart</mdb-card-header>
@@ -32,97 +32,60 @@
             </mdb-card-body>
             </mdb-card>
           </template>
-        </mdb-col> -->
+        </mdb-col>
 
-        <!-- <mdb-col md="6">
+        <mdb-col md="6">
           <template>
             <mdb-card class="chart">
               <mdb-card-header color="indigo lighten-1">Bar chart</mdb-card-header>
               <mdb-card-body>
-              <mdb-card-title>sdgsg</mdb-card-title>
+              <mdb-card-title></mdb-card-title>
               <div class="d-flex justify-content-center">
-                
+                <mdb-bar-chart 
+                  :data="salesData"
+                  :options="barChartOptions"
+                  :width="470"
+                  >
+                </mdb-bar-chart>
             </div>
             </mdb-card-body>
             </mdb-card>
           </template>
-        </mdb-col>      -->
+        </mdb-col>     
       </mdb-row>
-
-      <template>
-       
-        <mdb-card class="card">
-          <mdb-card-body>
-            <template>
-              <mdb-container>
-                <mdb-row>
-                  <mdb-col col='2'>
-                    <!-- <mdb-avatar tag="img" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" circle class="z-depth-1" alt="Sample avatar"/> -->
-                     <mdb-card-image class="cat" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%286%29.jpg" alt="Card image cap"></mdb-card-image>
-                  </mdb-col>
-                  <mdb-col col='10'>
-                    <mdb-card-title class="title">Basic card</mdb-card-title>
-                    <mdb-card-text class="subtitle">Short yeah yeah</mdb-card-text>
-                  </mdb-col>
-                </mdb-row>
-              </mdb-container>
-            </template>
-            <mdb-row>
-              
-            </mdb-row>
-            <mdb-row>
-              
-            </mdb-row>
-            
-            <!-- <mdb-btn color="primary">Button</mdb-btn> -->
-          </mdb-card-body>
-          <mdb-card-image src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%286%29.jpg" alt="Card image cap"></mdb-card-image>
-         <template>
-          <div class="text-center">
-            <v-rating v-model="value"></v-rating>
-          </div>
-        </template>
-        </mdb-card>
-       
-      </template>
     </mdb-container>
-     <!-- <mdb-card class="m-3">
+     <mdb-card class="m-3">
         <mdb-card-header color="indigo lighten-1">Data Table</mdb-card-header>
-        Sales Table-->
-        <!-- <DataTable :salesData='salesData' /> 
-     </mdb-card> -->
+        <!--Sales Table-->
+        <DataTable :salesData='salesData' />
+     </mdb-card>
   </div>
 </template>
 
 <script>
-import { mdbContainer, mdbCardImage, mdbCol } from "mdbvue";
-// import DataTable from '../components/DataTable';
-import {mdbRow} from 'mdbvue';
- import { mdbCard, mdbCardBody, mdbCardTitle } from 'mdbvue';
+import { mdbPieChart, mdbContainer, mdbBarChart } from "mdbvue";
+import DataTable from '../components/DataTable';
+import {mdbRow, mdbCol} from 'mdbvue';
+ import { mdbCard, mdbCardBody, mdbCardHeader, mdbCardTitle } from 'mdbvue';
 //  import { GChart } from 'vue-google-charts';
 
   export default {
     name: "Dashboard",
     components: {
-      // DataTable,
-      // mdbBarChart,
-      // mdbPieChart,
-      // mdbIcon,
-      // mdbRating,
+      DataTable,
+      mdbBarChart,
+      mdbPieChart,
       mdbContainer,
       mdbRow,
       mdbCol,
       mdbCard,
       mdbCardBody,
-      // mdbAvatar,
-      // mdbCardHeader,
+      mdbCardHeader,
       mdbCardTitle,
-      mdbCardImage,
       // GChart
     },
     data() {
       return {
-        value: 2,
         //Primary Data
         salesData: {
           labels: ["2015", "2016", "2017", "2018", "2019"],
